@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SurfaceProTouchToggler.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="hardware_id" Type="System.String" Scope="User">
+      <Value Profile="(Default)">HID\NTRG0001&amp;COL02</Value>
+    </Setting>
+    <Setting Name="text_enabled" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Touch is Enabled</Value>
+    </Setting>
+    <Setting Name="text_disabled" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Touch is Disabled</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
