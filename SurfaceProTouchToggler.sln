@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurfaceProTouchToggler", "SurfaceProTouchToggler\SurfaceProTouchToggler.csproj", "{7A400023-AD34-47A1-A6E8-CDAF7E822ECA}"
 EndProject
-Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Setup", "Setup\Setup.isproj", "{F621B4B3-2818-4491-A6A7-C46EAC9E8B40}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU
@@ -26,16 +24,6 @@ Global
 		{7A400023-AD34-47A1-A6E8-CDAF7E822ECA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7A400023-AD34-47A1-A6E8-CDAF7E822ECA}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
 		{7A400023-AD34-47A1-A6E8-CDAF7E822ECA}.SingleImage|Any CPU.Build.0 = Release|Any CPU
-		{F621B4B3-2818-4491-A6A7-C46EAC9E8B40}.CD_ROM|Any CPU.ActiveCfg = CD_ROM
-		{F621B4B3-2818-4491-A6A7-C46EAC9E8B40}.CD_ROM|Any CPU.Build.0 = CD_ROM
-		{F621B4B3-2818-4491-A6A7-C46EAC9E8B40}.Debug|Any CPU.ActiveCfg = DVD-5
-		{F621B4B3-2818-4491-A6A7-C46EAC9E8B40}.Debug|Any CPU.Build.0 = DVD-5
-		{F621B4B3-2818-4491-A6A7-C46EAC9E8B40}.DVD-5|Any CPU.ActiveCfg = DVD-5
-		{F621B4B3-2818-4491-A6A7-C46EAC9E8B40}.DVD-5|Any CPU.Build.0 = DVD-5
-		{F621B4B3-2818-4491-A6A7-C46EAC9E8B40}.Release|Any CPU.ActiveCfg = SingleImage
-		{F621B4B3-2818-4491-A6A7-C46EAC9E8B40}.Release|Any CPU.Build.0 = SingleImage
-		{F621B4B3-2818-4491-A6A7-C46EAC9E8B40}.SingleImage|Any CPU.ActiveCfg = SingleImage
-		{F621B4B3-2818-4491-A6A7-C46EAC9E8B40}.SingleImage|Any CPU.Build.0 = SingleImage
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
