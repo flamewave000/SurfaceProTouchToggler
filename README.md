@@ -1,7 +1,7 @@
 SurfaceProTouchToggler
 ======================
 
-Supported: Windows 8/8.1, Windows 10
+**Supported:** Windows 8/8.1, Windows 10
 
 This application is designed to enable/disable a single device on a Windows 8/8.1/10 computer. It is intended to toggle the touch screen device on or off, but by changing the target Hardware ID, the program can target any device.
 
