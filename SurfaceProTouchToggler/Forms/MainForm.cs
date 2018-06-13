@@ -19,22 +19,12 @@
  * the program will effectively toggle that device.
  */
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Security.Principal;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading;
-using System.Threading.Tasks;
+using System.Reflection;
 using System.Windows.Forms;
 using SurfaceProTouchToggler.Properties;
-using SurfaceProTouchToggler.Forms;
-using System.Reflection;
+using SurfaceTouchCore;
+
 namespace SurfaceProTouchToggler.Forms
 {
 	public partial class Main : Form
@@ -59,13 +49,13 @@ namespace SurfaceProTouchToggler.Forms
 				_touchEnabled = value;
 				if (value)
 				{
-					this.notifyIcon.Text = Settings.text_enabled;
-					this.notifyIcon.Icon = new Icon(Resources.icon_enabled);
+					notifyIcon.Text = Settings.text_enabled;
+					notifyIcon.Icon = new Icon(Resources.icon_enabled);
 				}
 				else
 				{
-					this.notifyIcon.Text = Settings.text_disabled;
-					this.notifyIcon.Icon = new Icon(Resources.icon_disabled);
+					notifyIcon.Text = Settings.text_disabled;
+					notifyIcon.Icon = new Icon(Resources.icon_disabled);
 				}
 				enableTouch.Enabled = !value;
 				disableTouch.Enabled = value;
@@ -75,7 +65,9 @@ namespace SurfaceProTouchToggler.Forms
 		/// <summary>
 		/// Helper property for accessing the settings
 		/// </summary>
-		private Properties.Settings Settings { get { return Properties.Settings.Default; } }
+		private Settings Settings { get { return Settings.Default; } }
+
+		private TouchManager TouchManager { get; set; }
 		#endregion
 
 
@@ -85,30 +77,16 @@ namespace SurfaceProTouchToggler.Forms
 			InitializeComponent();
 
 			// Subscribe to the different buttons
-			this.enableTouch.Click += enableTouch_Click;
-			this.disableTouch.Click += disableTouch_Click;
-			this.exitButton.Click += exitButton_Click;
-			this.aboutButton.Click += (sender, e) => { AboutBox about = new AboutBox(); about.ShowDialog(this); };
-			this.settingsButton.Click += (sender, e) => { SettingsForm settings = new SettingsForm(); settings.ShowDialog(this); };
+			enableTouch.Click += enableTouch_Click;
+			disableTouch.Click += disableTouch_Click;
+			exitButton.Click += exitButton_Click;
+			aboutButton.Click += (sender, e) => { AboutBox about = new AboutBox(); about.ShowDialog(this); };
+			settingsButton.Click += (sender, e) => { SettingsForm settings = new SettingsForm(); settings.ShowDialog(this); };
 
-			// Get the current status of the device
-			string[] result = ShellProcess.Run(DevConUri.Path.LocalPath, String.Format(Resources.devcon_status, Settings.hardware_id));
-
+			TouchManager = new TouchManager(Settings.hardware_id);
+			
 			// Determine if the device is enabled or disabled
-			TouchEnabled = true;
-			foreach (string line in result)
-			{
-				if (line == null)
-				{
-					break;
-				}
-				Match match = Regex.Match(line, Resources.regex_disabled, RegexOptions.IgnoreCase);
-				if (match.Success)
-				{
-					TouchEnabled = false;
-					break;
-				}
-			}
+			TouchEnabled = TouchManager.IsEnabled == true;
 		}
 		#endregion
 
@@ -117,7 +95,7 @@ namespace SurfaceProTouchToggler.Forms
 		protected override void OnLoad(EventArgs e)
 		{
 			base.OnLoad(e);
-			this.Hide();
+			Hide();
 		}
 		#endregion
 
@@ -128,7 +106,7 @@ namespace SurfaceProTouchToggler.Forms
 		/// </summary>
 		protected void enableTouch_Click(object sender, EventArgs e)
 		{
-			string[] result = ShellProcess.Run(DevConUri.Path.LocalPath, String.Format(Resources.devcon_enable, Settings.hardware_id));
+			TouchManager.Enable();
 			TouchEnabled = true;
 		}
 		/// <summary>
@@ -136,7 +114,7 @@ namespace SurfaceProTouchToggler.Forms
 		/// </summary>
 		protected void disableTouch_Click(object sender, EventArgs e)
 		{
-			string[] result = ShellProcess.Run(DevConUri.Path.LocalPath, String.Format(Resources.devcon_disable, Settings.hardware_id));
+			TouchManager.Disable();
 			TouchEnabled = false;
 		}
 		/// <summary>

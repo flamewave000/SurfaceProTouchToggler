@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurfaceProTouchToggler", "SurfaceProTouchToggler\SurfaceProTouchToggler.csproj", "{7A400023-AD34-47A1-A6E8-CDAF7E822ECA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurfaceTouchCore", "SurfaceTouchCore\SurfaceTouchCore.csproj", "{D06A6FAE-FDCC-4F7D-BC8E-D39164B8211E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurfaceTouchCLI", "SurfaceTouchCLI\SurfaceTouchCLI.csproj", "{3749C61F-286B-49EA-A8FF-13C2FECBAF48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,8 +28,31 @@ Global
 		{7A400023-AD34-47A1-A6E8-CDAF7E822ECA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7A400023-AD34-47A1-A6E8-CDAF7E822ECA}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
 		{7A400023-AD34-47A1-A6E8-CDAF7E822ECA}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{D06A6FAE-FDCC-4F7D-BC8E-D39164B8211E}.CD_ROM|Any CPU.ActiveCfg = Debug|Any CPU
+		{D06A6FAE-FDCC-4F7D-BC8E-D39164B8211E}.CD_ROM|Any CPU.Build.0 = Debug|Any CPU
+		{D06A6FAE-FDCC-4F7D-BC8E-D39164B8211E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D06A6FAE-FDCC-4F7D-BC8E-D39164B8211E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D06A6FAE-FDCC-4F7D-BC8E-D39164B8211E}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{D06A6FAE-FDCC-4F7D-BC8E-D39164B8211E}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{D06A6FAE-FDCC-4F7D-BC8E-D39164B8211E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D06A6FAE-FDCC-4F7D-BC8E-D39164B8211E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D06A6FAE-FDCC-4F7D-BC8E-D39164B8211E}.SingleImage|Any CPU.ActiveCfg = Debug|Any CPU
+		{D06A6FAE-FDCC-4F7D-BC8E-D39164B8211E}.SingleImage|Any CPU.Build.0 = Debug|Any CPU
+		{3749C61F-286B-49EA-A8FF-13C2FECBAF48}.CD_ROM|Any CPU.ActiveCfg = Debug|Any CPU
+		{3749C61F-286B-49EA-A8FF-13C2FECBAF48}.CD_ROM|Any CPU.Build.0 = Debug|Any CPU
+		{3749C61F-286B-49EA-A8FF-13C2FECBAF48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3749C61F-286B-49EA-A8FF-13C2FECBAF48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3749C61F-286B-49EA-A8FF-13C2FECBAF48}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{3749C61F-286B-49EA-A8FF-13C2FECBAF48}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{3749C61F-286B-49EA-A8FF-13C2FECBAF48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3749C61F-286B-49EA-A8FF-13C2FECBAF48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3749C61F-286B-49EA-A8FF-13C2FECBAF48}.SingleImage|Any CPU.ActiveCfg = Debug|Any CPU
+		{3749C61F-286B-49EA-A8FF-13C2FECBAF48}.SingleImage|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BCAEB9DD-E9C5-41FD-8059-26EFB7753A31}
 	EndGlobalSection
 EndGlobal

@@ -18,15 +18,8 @@
  * By modifying the hardware id in the settings to any other device,
  * the program will effectively toggle that device.
  */
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using SurfaceTouchCore;
 
 namespace SurfaceProTouchToggler.Forms
 {
@@ -38,7 +31,7 @@ namespace SurfaceProTouchToggler.Forms
 			InitializeComponent();
 
 			// Get the list of devices on the computer
-			string[] results = ShellProcess.Run(DevConUri.Path.LocalPath, " find *");
+			string[] results = DevCon.GetDevices();
 			string text = "";
 			foreach (string line in results)
 			{
