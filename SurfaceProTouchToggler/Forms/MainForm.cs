@@ -84,7 +84,7 @@ namespace SurfaceProTouchToggler.Forms
 			settingsButton.Click += (sender, e) => { SettingsForm settings = new SettingsForm(); settings.ShowDialog(this); };
 
 			TouchManager = new TouchManager(Settings.hardware_id);
-			
+
 			// Determine if the device is enabled or disabled
 			TouchEnabled = TouchManager.IsEnabled == true;
 		}
@@ -106,16 +106,16 @@ namespace SurfaceProTouchToggler.Forms
 		/// </summary>
 		protected void enableTouch_Click(object sender, EventArgs e)
 		{
-			TouchManager.Enable();
-			TouchEnabled = true;
+			if (TouchManager.Enable())
+				TouchEnabled = true;
 		}
 		/// <summary>
 		/// Disable the device
 		/// </summary>
 		protected void disableTouch_Click(object sender, EventArgs e)
 		{
-			TouchManager.Disable();
-			TouchEnabled = false;
+			if (TouchManager.Disable())
+				TouchEnabled = false;
 		}
 		/// <summary>
 		/// Exit the windows forms application

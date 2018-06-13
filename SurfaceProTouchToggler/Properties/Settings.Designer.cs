@@ -25,7 +25,7 @@ namespace SurfaceProTouchToggler.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("HID\\NTRG0001&COL02")]
+        [global::System.Configuration.DefaultSettingValueAttribute("HID\\VEN_8086&DEV_9D3E&SUBSYS_00000000&REV_21&COL05*")]
         public string hardware_id {
             get {
                 return ((string)(this["hardware_id"]));

@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="hardware_id" Type="System.String" Scope="User">
-      <Value Profile="(Default)">HID\NTRG0001&amp;COL02</Value>
+      <Value Profile="(Default)">HID\VEN_8086&amp;DEV_9D3E&amp;SUBSYS_00000000&amp;REV_21&amp;COL05*</Value>
     </Setting>
     <Setting Name="text_enabled" Type="System.String" Scope="User">
       <Value Profile="(Default)">Touch is Enabled</Value>
